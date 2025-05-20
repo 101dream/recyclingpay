@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Pay</title>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to top, #badfff, #1893ff);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: auto;
+        }
+        .box {
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+        #title {
+            font-size: 3em;
+        }
+        #content {
+            font-size: 1em;
+        }
+        .img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        #img {
+            width: 30vh;
+            height: auto;
+            margin-top: 2vh;
+        }
+        .list {
+            width: 50vh;
+            height: auto;
+            font-size: 1em;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 3vh;
+            border-radius: 0px 0px 10px 0px;
+            text-align: center;
+            color: #093b68;
+        }
+        .list > .button {
+            margin: 2vh auto 0 auto;
+            background-color: white;
+            color: #093b68;
+            width: 20vh;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 1vh;
+            box-shadow: 2px 2px 2px #093b68;
+        }
+        .coin {
+            font-size: 1em;
+            color: #093b68;
+        }
+        #success {
+            text-shadow: 2px 2px 2px #1688ec;
+        }
+        .message {
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h id="title"><b>Recycling Pay</b></h>
+        <hr color="white">
+    </div>
+    <div class="box">
+        <p id="content">
+            우리가 남긴 작은 손길이 지구의 내일을 바꿉니다.<br>
+            재활용은 더 나은 세상을 위한 우리의 약속입니다.<br>
+            우리는 생활 속에서도 참여할 수 있는 재활용 페이를 발전시켜 나갑니다.
+            <hr color="white">
+        </p>
+    </div>
+    <div class="img">
+        <img id="img" src="https://img.freepik.com/vecteurs-libre/icone-boisson-plastique-bouteille-eau_18591-82523.jpg?semt=ais_hybrid&w=740">
+    </div>
+    <br>
+    <div class="list">
+        ※<br>
+        페트병의 내용물을 깨끗이 비웠나요?<input type="checkbox"><br>
+        라벨을 떼고 최대한 압착했나요?<input type="checkbox"><br>
+        이물질이 들어가지 않도록 뚜껑을 닫았나요?<input type="checkbox"><br>
+        ※<br>
+        <div class="button" onclick="showMessage()">
+            <b>재활용하기</b>
+        </div>
+    </div>
+    <div class="message" id="message">
+        <div id="success">
+            <br><b>완료!</b><br>
+            오늘도 지구를 지키는 한 걸음에 참여하셨습니다.<br><br>
+        </div>
+        <div class="coin">
+            적립 코인 : +10<br>
+        </div>
+        <hr color="white">
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
