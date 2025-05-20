@@ -6,10 +6,9 @@
     <title>Recycling Pay</title>
     <style>
         body {
-            height: 100%;
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(to top, #badfff, #1893ff);
             background-attachment: fixed;
             background-repeat: no-repeat;
@@ -79,7 +78,15 @@
             color: white;
             font-size: 1.2em;
             text-align: center;
-            display: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            height: auto;
+            margin-top: 2vh;
+        }
+        .message.show {
+            visibility: visible;
+            opacity: 1;
         }
     </style>
 </head>
@@ -116,14 +123,16 @@
             오늘도 지구를 지키는 한 걸음에 참여하셨습니다.<br><br>
         </div>
         <div class="coin">
-            적립 코인 : +10<br>
+            <b>적립 코인 : +10</b><br><br>
         </div>
         <hr color="white">
     </div>
 
     <script>
         function showMessage() {
-            document.getElementById('message').style.display = 'block';
+            const msg = document.getElementById('message');
+            msg.classList.add('show');
+            msg.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </body>
